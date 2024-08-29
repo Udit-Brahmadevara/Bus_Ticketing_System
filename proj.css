@@ -1,0 +1,149 @@
+ul {
+    display: inline-block;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background:  linear-gradient(450deg,#50d5b7,#067d68);
+}
+
+li {
+    display: inline-block;
+    border-right:  solid #bbb;
+    background:  linear-gradient(450deg,#50d5b7,#067d68);
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 60px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: lightblue;
+}
+
+ul {
+    display: inline-block;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    border: black;
+}
+
+td {
+    text-align: center;
+    width: 30px;
+}
+
+.det1 {
+    margin: 30;
+    padding: 10;
+    color: rgb(100, 139, 211);
+    text-align: center;
+    background-color: white;
+}
+
+.container {
+    display: inline-block;
+    width: 50%;
+    padding: 100;
+    font-size: 20;
+    color: azure;
+}
+
+.arrive_depart  {
+    font-size: 20;
+}
+
+.busicon {
+    float: right;
+    margin-right: 100;
+}
+
+label {
+    display: inline-block;
+    width: 100px;
+}
+
+button {
+    padding-left: 20;
+    padding-right: 20;
+    padding-top: 5;
+    padding-bottom: 5;
+}
+
+.details {
+    padding: 10;
+    color: azure;
+    background:linear-gradient(450deg,#50d5b7,#067d68);
+    border:solid black;
+}
+
+#busrow {
+    color: black;
+    background: azure;
+}
+
+.about {
+    margin-left: 80;
+    padding: 20;
+    width: 500;
+    display: inline-block;
+    
+}
+
+.contact {
+    margin-right: 100;
+    padding: 20;
+    float: right;
+}
+
+.bustime {
+    margin-left: 20;
+    margin-right: 20;
+    padding: 10;
+    border: black solid 1px;
+    background: linear-gradient(450deg,#50d5b7,#067d68);
+    font-size: 20;
+}
+
+.businfo {
+    margin-left: 80;
+    padding: 20;
+    width: 500;
+    display: inline-block;
+    
+}
+
+.starttime {
+    margin-right: 100;
+    padding: 20;
+    float: right;
+}
+
+.image { 
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20;
+}
+
+.seats {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+th,td {
+    width: 55;  
+    height: 35;
+}
+
+body {
+    margin: 10;
+    background-size: cover;
+    background-image:url('https://cdn.pixabay.com/photo/2020/02/19/22/57/blue-background-4863452_1280.jpg');
+    color: azure;
+}

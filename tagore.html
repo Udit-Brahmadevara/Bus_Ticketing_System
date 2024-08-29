@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src = "https://code.jquery.com/jquery-3.6.0.min.js"> </script>
+        <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+                <link rel="stylesheet" href="proj.css">
+
+    </head>
+    <body>
+        <h1>CHOOSE SEATS</h1>
+        <div id = "maindiv">
+            <div id = "main"></div>
+            <div id="div1">
+                <p id='p1'></p>
+            <form action="sam.html" fname='myform'>
+                <button>Proceed to pay</button>
+            </form>
+            </div>
+        </div>
+        
+        </div>
+        <script type = "text/babel">
+            class BusRow extends React.Component{
+                // constructor(props){
+                //     super(props);
+                //     this.state={
+                //         price:1500
+                //     }
+                //     this.ini=null;
+                //     this.rate=(e)=>{
+                //         this.ini=e;
+                //     }
+                //     this.change=(event)=>{
+                //         this.ini.innerHTML=1800
+
+                //     }
+
+                // }
+                render(){
+                    return(
+                        <div id = "busrow">
+                            <div id = "buscell" onClick = {() => toggle_color(this, 0)}>{this.props.data[0]}</div>
+                            <div id = "buscell" onClick = {() => toggle_color(this, 1)}>{this.props.data[1]}</div>
+                            <div id = "buscell" onClick = {() => toggle_color(this, 2)}>{this.props.data[2]}</div>
+                            <div id = "buscell" onClick = {() => toggle_color(this, 3)}>{this.props.data[3]}</div>
+                            <div id = "buscell" onClick = {() => toggle_color(this, 4)}>{this.props.data[4]}</div>
+                        </div>
+                    )
+                }
+            }
+
+            
+            function toggle_color(maindiv, place){
+                const thisdiv = ReactDOM.findDOMNode(maindiv);
+                var reqdiv = thisdiv.childNodes[place];
+                console.log(reqdiv);
+                if (place != 2){
+                    var divcss = getComputedStyle(reqdiv);
+                    document.forms['myform']
+                    if (divcss.backgroundColor.toString() == "rgb(255, 255, 255)"){
+                        $(reqdiv).css("background-color", "#555555");
+                        let tp=0;
+                        tp+=1500
+                        document.getElementById("p1").innerHTML=tp
+                    } //$(reqdiv).css("background-color", "#555555");
+                    else{
+                        $(reqdiv).css("background-color", "#ffffff");
+                        document.getElementById("p1").innerHTML=null;
+                    } //$(reqdiv).css("background-color", "#ffffff");
+                }
+            };
+            function addelement(maindiv, rownames){
+            var newdiv = document.createElement("div");
+            document.querySelector(maindiv).appendChild(newdiv);  
+            ReactDOM.render(
+                <BusRow data = {rownames}></BusRow>, newdiv
+                )
+            }
+            var rownames = ["a", "b", " ", "c", "d"];
+            addelement("#main", ["a1", "b1", " ", "c1", "d1"]);
+            addelement("#main", ["a2", "b2", "W", "c2", "d2"]);
+            addelement("#main", ["a3", "b3", "A", "c3", "d3"]);
+            addelement("#main", ["a4", "b4", "L", "c4", "d4"]);
+            addelement("#main", ["a5", "b5", "K", "c5", "d5"]);
+            addelement("#main", ["a6", "b6", " ", "c6", "d6"]);
+            addelement("#main", ["a7", "b7", "W", "c7", "d7"]);
+            addelement("#main", ["a8", "b8", "A", "c8", "d8"]);
+            addelement("#main", ["a9", "b9", "Y", "c9", "d9"]);
+            addelement("#main", ["a10", "b10", " ", "c10", "d10"]);
+            addelement("#main", ["a11", "b11", " ", "c11", "d11"]);
+            
+        </script>
+        <style>
+            h1{
+                text-align: center;
+            }
+            #maindiv{
+                display : grid;
+                grid-template-columns: auto;
+                justify-content: center;
+            }
+            #main{
+                display : grid;
+                grid-template-columns: auto;
+                align-items : center;
+                justify-content: center;
+            }
+            #busrow{
+                display : grid;
+                grid-template-columns : auto auto auto auto auto;
+                align-items : center;
+                width : max-content;
+                justify-content: center;
+                border : 2px solid black;
+            }
+            #buscell{
+                border : 1px solid rgb(0, 0, 0);
+                margin : 4px;
+                text-align: center;
+                width : 50px;
+                height : 50px;
+                justify-content: center;
+                align-items: center;
+            }
+         
+                 #div1 {
+                    /* position: relative-center; */
+                    align-items: center;
+                    width: 300px;
+                    border: 3px solid black;
+                    padding: 50px;
+                    margin: 20px;
+                    color: black;
+                } 
+                button {
+                    background-color:#4CAF50; 
+                    color: black; 
+                    border: 2px solid #4CAF50;
+                    text-align: center;
+                }
+        </style>
+        
+    </body>
+</html>

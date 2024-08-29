@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body{
+                font-family: "Poppins",sans-serif;
+                margin:0;padding: 0;
+                box-sizing: border-box;
+                outline: none;border:none;
+                text-decoration: none;
+                text-transform: uppercase;
+            }
+            .div1{
+                min-height: 100vh;
+                background-color: #eee;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-flow: column;
+                padding-bottom: 60px;
+            }
+            .div1 form{
+                background: #fff;
+                border-radius: 5px;
+                box-shadow: 0 10px 15px rgba(0,0,0,.1);
+                padding:20px;
+                width:600px; 
+            }
+            .div1 form .cn{
+                margin-top: 20px;
+            }
+            .div1 form .cn span{
+                display: block;
+                color:#999;
+                padding-bottom: 5px;
+            }
+            .div1 form .cn input,.div1 form .cn select{
+                width:95%;
+                padding:10px;
+                border-radius: 10px;
+                border: 1px solid rgba(0,0,0,.3);
+                color: #444;
+            }
+            .div1 form .cn2{
+                display: flex;
+                gap: 15px; 
+            }
+            .div1 form .cn2 .cn{
+                flex: 1 1 150px;
+            }
+            .div1 form .button{
+                width: 100%;
+                background: linear-gradient(450deg,blueviolet,deeppink);
+                margin-top: 20px;
+                padding: 10px;
+                font-size: 20px;
+                color:#fff;
+                border-radius: 10px;
+                cursor: pointer;
+                transition: .2s linear;
+                break-before: 2px;
+            }
+            .div1 form .button:hover{
+                letter-spacing: 2px;
+                opacity: .8;
+            }
+        </style>
+    </head>
+    <body>
+        <div class='div1'>
+            <form action="pdf.html" name='myform'>
+                <div class='cn'>
+                    <span>Enter passenger name</span>
+                    <input type="text" placeholder="passenger-name" name='fpn' required/></br></br>
+                    <span>Phone number</span></br>
+                    <input type="tel" minlength="10" name='fphone1' required/></br></br>
+                    <span>Age</span></br>
+                    <input type='number' maxlength="3"  name ='uage' required/></br></br>
+                    <span>Enter email ID</span></br>
+                    <input type='email' name='umail' required/></br></br>
+                    <span>Enter amount</span></br>
+                    <input type='number' minlength="4" name='amount' value='1860' readonly/>
+                </div>
+                <div class='cn'>
+                        <span>Card Number For Payment</span>
+                        <input type="number" placeholder="card-number" maxlength="16" required/>
+                </div>
+                <div class='cn'> 
+                        <span>Card Owner Name</span>
+                        <input type="text" placeholder="owner-number" maxlength="20" required/>
+                </div>
+                    <div class='cn2'>
+                        <div class='cn'>
+                            <span>Expiration month</span>
+                            <select class='select-month' required>
+                                <option value="month" selected disabled>Mm</option>
+                                <option value="01">01</option>
+                                <option value="02">02</option>
+                                <option value="03">03</option>
+                                <option value="04">04</option>
+                                <option value="05">05</option>
+                                <option value="06">06</option>
+                                <option value="07">07</option>
+                                <option value="08">08</option>
+                                <option value="09">09</option>
+                                <option value="10">10</option>
+                                <option value="11">11</option>
+                                <option value="12">12</option>
+                            </select>
+                        </div>
+                            <div class='cn'>
+                                <span>Expiration year</span>
+                                <select name='' class='' class='select-year' required>
+                                    <option value="year" selected disabled>yy</option>
+                                    <option value="2021">2021</option>
+                                    <option value="2022">2022</option>
+                                    <option value="2023">2023</option>
+                                    <option value="2024">2024</option>
+                                    <option value="2025">2025</option>
+                                    <option value="2026">2026</option>
+                                    <option value="2027">2027</option>
+                                    <option value="2028">2028</option>
+                                    <option value="2029">2029</option>
+                                    <option value="2030">2030</option>
+                                    <option value="2031">2031</option>
+                                    <option value="2032">2032</option>
+                                </select>
+                            </div>
+                            <div class='cn'>
+                                <span>cvv</span>
+                                <input type='password' minlength="3" maxlength="3" class='input-cvv' required/>
+                            </div>
+                    </div>
+                <input type='submit' value='submit' class='button' onclick="perform()"/>
+            </form>
+        </div>
+        <div id='root'>
+
+        </div>
+    </body>
+</html>
